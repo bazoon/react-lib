@@ -1,0 +1,77 @@
+$modal-height: 500px;
+$modal-width: 600px;
+$modal-background-color: #fff;
+$modal-header-padding: 10px;
+$modal-body-padding: 20px;
+$modal-footer-padding: 10px;
+
+$modal-header-height: 40px;
+$modal-footer-height: 50px;
+$modal-radius: 5px;
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: $modal-radius;
+    width: $modal-width;
+    max-width: 100%;
+    height: $modal-height;
+    max-height: 100%;
+    z-index: 1010;
+    background-color: $modal-background-color;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+    &__header {
+        box-sizing: border-box;
+        height: $modal-header-height;
+        background-color: #01ABD3;
+        color: #fff;
+        font-weight: 900;
+        padding: $modal-header-padding;
+        border-radius: $modal-radius $modal-radius 0 0;
+    }
+
+    &__body {
+        box-sizing: border-box;
+        width: 100%;
+        height: calc(100% - #{$modal-header-height} - #{$modal-footer-height});
+        padding: $modal-body-padding;
+        overflow: auto;
+    }
+
+    &__footer {
+        box-sizing: border-box;
+        height: $modal-footer-height;
+        width: 100%;
+        padding: $modal-footer-padding;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            margin-right: 8px;
+        }
+
+        button:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+    &__overlay {
+        z-index: 1000;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        
+    }
+
+
+}

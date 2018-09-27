@@ -1,0 +1,119 @@
+@import '../Scss/mixins';
+
+.datagrid {
+    @include background-color('primary-color');
+    @include color('primary-text-color');
+    
+    th, td {
+        vertical-align: top;
+        border: 1px solid #eee;
+        @include padding-left('tiny');
+        @include padding-right('tiny');
+        @include padding-top('tiny');
+        @include padding-bottom('tiny');
+    }
+
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    &__scrolltable {
+        overflow-x: scroll;
+        height: 100%;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+    &__body {
+        overflow-y: scroll;
+        flex: 1;
+        -webkit-flex: 1;
+    }
+
+    &__row {
+        &_selected {
+            @include background-color('grid-row-selected-color');
+        }
+    }
+
+    &__tree__expander {
+        display: inline-block;
+        max-height: 24px;
+        margin-right: 8px;
+        &-icon {
+            width: 11px;
+            cursor: pointer;
+        }
+    }
+
+    &__cell {
+        text-align: left;
+        font-weight: 100;
+        
+        &__text {
+            max-height: 56px;
+            overflow: hidden;
+        }
+
+        &_stacked {
+            th, td {
+                border: none;
+                @include padding-left('zero');
+                @include padding-right('zero');
+                @include padding-top('zero');
+                @include padding-bottom('zero');
+            }
+        }
+    }
+
+    &__header__cell {
+        @include background-color('grid-header-background');
+        @include color('grid-header-color');
+        // font-weight: $grid-header-font-weight;
+        // font-size: $grid-header-font-size;
+        // background-color: $grid-header-background;
+        // color: $grid-header-color;
+        &_stacked {
+            th, td {
+                border: none;
+                padding-top: 0px;
+            }
+        }
+    }
+
+    &__sorter {
+        position: relative;
+
+        &-up {
+            position: absolute;
+            top: -3px;
+        }
+
+        &-down {
+            position: absolute;
+            top: 8px;
+        }
+
+        &_inactive {
+            opacity: 0.5;
+        }
+
+    }
+
+
+
+    &__pagination {
+        width: calc(100%);
+        display: flex;
+        justify-content: center;
+        background: #fff;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    
+
+}
