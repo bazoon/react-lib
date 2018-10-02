@@ -1,16 +1,33 @@
 @import '../Scss/mixins';
 
 .datagrid {
-    @include background-color('primary-color');
-    @include color('primary-text-color');
     
+    input {
+        box-sizing: border-box;
+        
+    }
+
+    th {
+        position: relative;
+    }
+
     th, td {
+        box-sizing: border-box;
         vertical-align: top;
         border: 1px solid #eee;
         @include padding-left('tiny');
         @include padding-right('tiny');
         @include padding-top('tiny');
         @include padding-bottom('tiny');
+    }
+
+    &__title {
+        box-sizing: border-box;
+        @include padding('tiny');
+        @include height('large');
+        @include background-color('primary');
+        @include color('text-color');
+        width: 100%;
     }
 
     table {
@@ -28,7 +45,7 @@
     }
 
     &__body {
-        overflow-y: scroll;
+        overflow: hidden;
         flex: 1;
         -webkit-flex: 1;
     }
@@ -51,34 +68,57 @@
 
     &__cell {
         text-align: left;
+        @include font-size('font-size');
         font-weight: 100;
+        max-width: 100%;
         
         &__text {
             max-height: 56px;
+            max-width: 100%;
             overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
         }
 
         &_stacked {
             th, td {
-                border: none;
-                @include padding-left('zero');
-                @include padding-right('zero');
+                border-left: none;
+                border-top: none;
+                border-bottom: none;
+                border-right: none;
                 @include padding-top('zero');
                 @include padding-bottom('zero');
             }
         }
     }
 
+    &__header__filter {
+        @include padding-top('small');
+        width: 100%;
+
+        * {
+            width: 100%;
+        }
+    }
+
+    &__header__splitter {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        position: absolute;
+        cursor: col-resize;
+    }
+
     &__header__cell {
         @include background-color('grid-header-background');
         @include color('grid-header-color');
-        // font-weight: $grid-header-font-weight;
-        // font-size: $grid-header-font-size;
-        // background-color: $grid-header-background;
-        // color: $grid-header-color;
+        @include font-weight('grid-header-font-weight');
+        @include font-size('font-size');
+        
         &_stacked {
             th, td {
-                border: none;
+                // border: none;
                 padding-top: 0px;
             }
         }

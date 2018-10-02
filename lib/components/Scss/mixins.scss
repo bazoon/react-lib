@@ -1,20 +1,20 @@
 $themes: (
   'white': (
-    'primary-background': #36367e,
-    'primary-color': #fff,
-    'primary-text-color': #000,
+    'primary': #36367e,
     'secondary': #8f2f67,
+    'text-color': #fff,
     'zero': 0,
     'tiny': 8px,
     'small': 16px,
     'medium': 24px,
-    'large': 40px,
-
+    'large': 32px,
+    'big': 40px,
+    'font-size': 14px,
 
     'grid-header-background': #F5F5F5,
     'grid-header-color': #666,
     'grid-row-selected-color': #f5f5f5,
-
+    'grid-header-font-weight': 600
   ),
   'dark': (
     'primary': firebrick,
@@ -39,13 +39,16 @@ $themes: (
     @include themify('color', $arguments...);
 }
   
-  
 @mixin border-color($arguments...) {
     @include themify('border-color', $arguments...);
 }
   
 @mixin background-color($arguments...) {
     @include themify('background-color', $arguments...);
+}
+
+@mixin padding($arguments...) {
+    @include themify('padding', $arguments...);
 }
 
 @mixin padding-left($arguments...) {
@@ -62,4 +65,16 @@ $themes: (
 
 @mixin padding-bottom($arguments...) {
     @include themify('padding-bottom', $arguments...);
+}
+
+@mixin font-weight($arguments...) {
+    @include themify('font-weight', $arguments...);
+}
+
+@mixin font-size($arguments...) {
+    @include themify('font-size', $arguments...);
+}
+
+@mixin height($arguments...) {
+    @include themify('height', $arguments...);
 }
