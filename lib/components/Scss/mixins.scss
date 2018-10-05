@@ -78,3 +78,11 @@ $themes: (
 @mixin height($arguments...) {
     @include themify('height', $arguments...);
 }
+
+@mixin width($arguments...) {
+    @include themify('width', $arguments...);
+}
+
+@mixin max-width($arguments...) {
+    @include themify('max-width', $arguments...);
+}

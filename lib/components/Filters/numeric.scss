@@ -1,0 +1,10 @@
+@import '../Scss/mixins';
+
+.numeric-filter {
+
+    display: flex;
+    select {
+        @include max-width('big');
+    }
+
+}
