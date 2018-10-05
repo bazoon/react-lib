@@ -56,7 +56,8 @@
     }
 
     &__body {
-        overflow: hidden;
+        overflow-y: hidden;
+        overflow-x: auto;
         flex: 1;
         -webkit-flex: 1;
     }
