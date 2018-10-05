@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "cosmos": "cosmos",
-    "cosmos:export": "cosmos-export"
+    "cosmos:export": "cosmos-export",
+    "heroku-prebuild": "npm install",
+    "heroku-postbuild": "echo This runs afterwards."
+  },
+  "engines": {
+    "npm": "6.2.0",
+    "node": "10.8.0"
   },
   "author": "",
   "license": "ISC",
