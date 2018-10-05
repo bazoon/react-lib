@@ -1,1 +1,1 @@
-web: npm run cosmos
+web: node node_modules/react-cosmos/bin/cosmos
