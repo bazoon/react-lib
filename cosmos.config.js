@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     publicPath: 'public',
+    port: process.env.PORT || 5000
 }
 
 module.exports.webpack = function (webpackConfig) {
