@@ -53,6 +53,8 @@
 
     &__content {
         position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     &__body {
