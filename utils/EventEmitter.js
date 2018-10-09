@@ -11,6 +11,15 @@ class EventEmitter {
         this.events[event].push(listener);
     };
     
+    un(event, listener) {
+        const listeners = this.events && this.events[event];
+        if (listeners && listener) {
+            const index = listeners.indexOf(listener);
+            listeners.splice(index, 1);
+        }
+    }
+
+
     removeListener(event, listener) {
         var idx;
     
