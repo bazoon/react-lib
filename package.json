@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/react-cosmos/bin/cosmos",
+    "start": "npm run cosmos",
     "cosmos": "cosmos",
     "cosmos:export": "cosmos-export",
     "heroku-prebuild": "npm install",

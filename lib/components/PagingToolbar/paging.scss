@@ -1,0 +1,26 @@
+@import '../Scss/mixins';
+
+.paging-toolbar {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__page {
+        @include width('large');
+        @include height('large');
+        border: solid 1px silver;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &_current {
+            font-weight: bold;
+            cursor: auto;
+        }
+    }
+
+
+}
