@@ -1,0 +1,46 @@
+@import '../Scss/mixins';
+
+.virtual-grid {
+    box-sizing: border-box;
+
+    &__cell {
+        box-sizing: border-box;
+        overflow: hidden;
+        border-top: solid 0.2px silver;
+        border-left: solid 0.2px silver;
+        padding: 8px;
+        
+
+        
+        &_last {
+            border-right: solid 0.2px silver;
+        }
+
+        &_editing {
+            padding: 0;
+        }
+    }
+
+    &__header-cell {
+        @include background-color('grid-header-background');
+        @include color('grid-header-color');
+        @include font-weight('grid-header-font-weight');
+        @include font-size('font-size');
+        
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-content {
+            text-align: center;
+            @include margin-bottom('tiny');
+        }
+
+        &-filter * {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+    }
+}

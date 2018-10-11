@@ -86,3 +86,7 @@ $themes: (
 @mixin max-width($arguments...) {
     @include themify('max-width', $arguments...);
 }
+
+@mixin margin-bottom($arguments...) {
+    @include themify('padding-bottom', $arguments...);
+}
