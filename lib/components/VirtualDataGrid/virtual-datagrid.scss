@@ -3,6 +3,10 @@
 .virtual-grid {
     box-sizing: border-box;
 
+    &__header {
+        overflow: hidden !important;
+    }
+
     &__cell {
         box-sizing: border-box;
         overflow: hidden;
