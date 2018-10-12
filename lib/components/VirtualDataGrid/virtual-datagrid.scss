@@ -23,10 +23,17 @@
         &_editing {
             padding: 0;
         }
+
+        &_selected {
+            @include background-color('grid-row-selected-color');
+        }
+
     }
 
     &__header-wrap {
         @include background-color('grid-header-background');
+        border-right: solid 0.2px rgba($color: #000000, $alpha: 0.4);
+        border-top: solid 0.2px rgba($color: #000000, $alpha: 0.4);
     }
 
     &__header-cell {
