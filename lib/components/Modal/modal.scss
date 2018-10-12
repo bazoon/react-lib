@@ -1,5 +1,5 @@
-$modal-height: 500px;
-$modal-width: 600px;
+@import '../Scss/mixins';
+
 $modal-background-color: #fff;
 $modal-header-padding: 10px;
 $modal-body-padding: 20px;
@@ -16,9 +16,7 @@ $modal-radius: 5px;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: $modal-radius;
-    width: $modal-width;
     max-width: 100%;
-    height: $modal-height;
     max-height: 100%;
     z-index: 1010;
     background-color: $modal-background-color;
@@ -32,12 +30,15 @@ $modal-radius: 5px;
 
     &__header {
         box-sizing: border-box;
-        height: $modal-header-height;
-        background-color: #01ABD3;
-        color: #fff;
         font-weight: 900;
-        padding: $modal-header-padding;
         border-radius: $modal-radius $modal-radius 0 0;
+
+        @include padding('tiny');
+        @include height('large');
+        @include background-color('primary');
+        @include color('text-color');
+        width: 100%;
+
     }
 
     &__body {
