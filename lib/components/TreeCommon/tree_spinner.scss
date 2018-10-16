@@ -1,0 +1,32 @@
+
+@keyframes spinner {
+    from {
+      color: #000000;
+    }
+    
+    to {
+      color: #999999;
+    }
+  }
+  
+  .spinner__one {
+      animation-name: spinner;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-delay: 0;
+  }
+  
+  .spinner__two {
+      animation-name: spinner;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-delay: 0.5s;
+  }
+  
+  .spinner__three {
+      animation-name: spinner;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+  }
+
