@@ -1,14 +1,16 @@
+$basicSize: 8px;
+
 $themes: (
   'white': (
     'primary': #36367e,
     'secondary': #8f2f67,
     'text-color': #fff,
     'zero': 0,
-    'tiny': 8px,
-    'small': 16px,
-    'medium': 24px,
-    'large': 32px,
-    'big': 40px,
+    'tiny': $basicSize,
+    'small': $basicSize * 2,
+    'medium': $basicSize * 3,
+    'large': $basicSize * 4,
+    'big': $basicSize * 5,
     'font-size': 14px,
 
     'grid-header-background': #F5F5F5,
@@ -86,6 +88,15 @@ $themes: (
 @mixin max-width($arguments...) {
     @include themify('max-width', $arguments...);
 }
+
+@mixin min-width($arguments...) {
+    @include themify('min-width', $arguments...);
+}
+
+@mixin min-height($arguments...) {
+    @include themify('min-height', $arguments...);
+}
+
 
 @mixin margin-bottom($arguments...) {
     @include themify('padding-bottom', $arguments...);

@@ -161,8 +161,20 @@
 
     &__action-icon {
         @include width('small');
+        @include height('small');
+        @include min-width('small');
+        @include min-height('small');
         cursor: pointer;
+
+        &_disabled {
+            cursor: default;
+            opacity: 0.4;
+        }
+        
+        
     }
+
+    
 
     &__pagination {
         width: calc(100%);

@@ -1,0 +1,49 @@
+@import '../Scss/mixins';
+
+.tree-menu {
+    min-height: 50vh;
+    @include background-color('primary');
+    color: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    @include padding-left('tiny');
+    @include padding-right('tiny');
+    @include padding-top('small');
+    @include padding-bottom('tiny');
+
+    &__item {
+        cursor: pointer;
+        @include padding-left('small');
+        @include padding-top('small');
+        // @include padding-bottom('tiny');
+        
+        &-children {
+            transition: max-height 0.5s;
+        }
+        
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-title {
+
+        }
+
+
+
+        &-expand {
+            width: $basicSize * 1.5;
+            cursor: pointer;
+            
+            
+        }
+
+    }
+
+    
+
+}
+
+.tree-menu > .tree-menu__item:first-child {
+    @include padding-top('zero');
+}
