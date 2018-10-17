@@ -25,6 +25,14 @@ $modal-radius: 5px;
     input, select {
         width: 100%;
         height: 20px;
+        box-sizing: border-box;
+        @include padding('small');
+    }
+
+    fieldset {
+        margin: 0;
+        border: solid 0.1px silver;
+        
     }
 
 
