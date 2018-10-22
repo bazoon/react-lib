@@ -1,0 +1,53 @@
+@import '../Scss/mixins';
+
+.tab {
+
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    &__panes {
+        @include margin-top('small');
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        box-sizing: inherit;
+    }
+
+    &__menu {
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: inherit;
+        position: relative;
+    }
+
+    &__menu:after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        margin: auto;
+        background: silver;
+    }
+
+    &__menu-item {
+        text-decoration: none;
+        color: #000000;
+        @include padding('tiny');
+        box-sizing: inherit;
+        z-index: 1;
+    }
+
+    &__menu-item_active{
+        border-bottom: solid 2px;
+        @include border-color('secondary');
+        box-sizing: inherit;
+    }
+
+
+
+
+}

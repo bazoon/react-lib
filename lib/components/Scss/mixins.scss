@@ -97,6 +97,9 @@ $themes: (
     @include themify('min-height', $arguments...);
 }
 
+@mixin margin-top($arguments...) {
+    @include themify('padding-top', $arguments...);
+}
 
 @mixin margin-bottom($arguments...) {
     @include themify('padding-bottom', $arguments...);
