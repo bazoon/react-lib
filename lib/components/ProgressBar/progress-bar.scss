@@ -1,0 +1,33 @@
+@import '../Scss/mixins';
+
+.progress-bar {
+    background: #737373;
+    border-radius: 10px;
+}
+
+.progress-bar__indicator {
+    border-radius: 10px;
+    height: 100%;
+    background: #167291;
+    background: linear-gradient(to right, #0b3a4a 0%,#167291 59%,#25c3f7 100%);
+    position: relative;
+}
+
+.progress-bar__indicator_almost {
+    background: linear-gradient(to right, #0b520c 0%,#149c16 59%,#1ee521 100%);
+}
+
+// .progress-bar__indicator:after {
+//     height: 100%;
+//     background: #167291;
+//     position: absolute;
+//     right: -20px;
+//     width: 40px;
+//     transform: skewX(-28deg);
+//     content: ''
+// }
+
+
+.progress-bar__indicator_overdue {
+    background: linear-gradient(to right, #42040b 0%,#8a0817 59%,#eb0e28 100%);
+}
