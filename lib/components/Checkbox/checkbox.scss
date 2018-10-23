@@ -57,6 +57,7 @@
     border-radius: 4px;
     @include border-color('primary');
     @include background-color('primary');
+    box-sizing: border-box;
 }
 
 .checkbox__label:after {
@@ -74,7 +75,8 @@
     height: 6px;
     margin-top: -1px;
     margin-left: -1px;
-    opacity: 0
+    opacity: 0;
+    box-sizing: border-box;
 }
 
 .checkbox__input.checked~.checkbox__label:before {
