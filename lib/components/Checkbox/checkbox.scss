@@ -1,0 +1,147 @@
+@import '../Scss/mixins';
+
+.checkbox__input.focus~.checkbox__label,.checkbox__input:focus~.checkbox__label,.checkbox__label.hover,.checkbox__label:hover {
+    @include color('primary');
+}
+
+.checkbox__input.focus~.checkbox__label:before,.checkbox__input:focus~.checkbox__label:before,.checkbox__label.hover:before,.checkbox__label:hover:before {
+    @include border-color('primary');
+}
+
+.checkbox__input.checked~.checkbox__label.hover:before,.checkbox__input.checked~.checkbox__label:hover:before,.checkbox__input.focus.checked~.checkbox__label:before,.checkbox__input.focus:checked~.checkbox__label:before,.checkbox__input:checked~.checkbox__label.hover:before,.checkbox__input:checked~.checkbox__label:hover:before,.checkbox__input:focus.checked~.checkbox__label:before,.checkbox__input:focus:checked~.checkbox__label:before {
+    @include border-color('primary');
+    @include background-color('primary');
+    transition: all .4s;
+}
+
+.checkbox .checkbox__input.disabled.checked~.checkbox__label.hover:before,.checkbox .checkbox__input.disabled.checked~.checkbox__label:before,.checkbox .checkbox__input.disabled.checked~.checkbox__label:hover:before,.checkbox .checkbox__input.disabled:checked~.checkbox__label.hover:before,.checkbox .checkbox__input.disabled:checked~.checkbox__label:before,.checkbox .checkbox__input.disabled:checked~.checkbox__label:hover:before,.checkbox .checkbox__input:disabled.checked~.checkbox__label.hover:before,.checkbox .checkbox__input:disabled.checked~.checkbox__label:before,.checkbox .checkbox__input:disabled.checked~.checkbox__label:hover:before,.checkbox .checkbox__input:disabled:checked~.checkbox__label.hover:before,.checkbox .checkbox__input:disabled:checked~.checkbox__label:before,.checkbox .checkbox__input:disabled:checked~.checkbox__label:hover:before,fieldset[disabled] .checkbox .checkbox__input.checked~.checkbox__label.hover:before,fieldset[disabled] .checkbox .checkbox__input.checked~.checkbox__label:before,fieldset[disabled] .checkbox .checkbox__input.checked~.checkbox__label:hover:before,fieldset[disabled] .checkbox .checkbox__input:checked~.checkbox__label.hover:before,fieldset[disabled] .checkbox .checkbox__input:checked~.checkbox__label:before,fieldset[disabled] .checkbox .checkbox__input:checked~.checkbox__label:hover:before {
+    background-color: #dde1e6;
+}
+
+.checkbox {
+    margin-bottom: 16px;
+}
+
+.checkbox:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox__input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    margin: -1px;
+    padding: 0
+}
+
+.checkbox__label {
+    position: relative;
+    cursor: pointer;
+    margin: 0
+}
+
+.checkbox__label,.checkbox__label:before {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox__label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid;
+    border-radius: 4px;
+    @include border-color('primary');
+    @include background-color('primary');
+}
+
+.checkbox__label:after {
+    content: "";
+    position: absolute;
+    background: hsla(0,0%,50%,0);
+    border: 0;
+    border-color: #fff;
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+    width: 10px;
+    height: 6px;
+    margin-top: -1px;
+    margin-left: -1px;
+    opacity: 0
+}
+
+.checkbox__input.checked~.checkbox__label:before {
+    @include color('primary');
+    @include background-color('primary');
+}
+
+.checkbox__input:checked~.checkbox__label:before {
+    @include color('primary');
+    @include background-color('primary');
+}
+
+.checkbox__input.checked~.checkbox__label:before,.checkbox__input:checked~.checkbox__label:before {
+    @include color('primary');
+}
+
+.checkbox__input.checked~.checkbox__label:after,.checkbox__input:checked~.checkbox__label:after {
+    opacity: 1
+}
+
+.checkbox .checkbox__input.disabled,.checkbox .checkbox__input:disabled,fieldset[disabled] .checkbox .checkbox__input {
+    pointer-events: none;
+}
+
+.checkbox .checkbox__input.disabled~.checkbox__label,.checkbox .checkbox__input:disabled~.checkbox__label,fieldset[disabled] .checkbox .checkbox__input~.checkbox__label {
+    cursor: default;
+    color: #848e99;
+}
+
+.checkbox .checkbox__input.disabled~.checkbox__label:before,.checkbox .checkbox__input:disabled~.checkbox__label:before,fieldset[disabled] .checkbox .checkbox__input~.checkbox__label:before {
+    border-color: #dde1e6;
+    background-color: #f4f7fb;
+}
+
+.checkbox .checkbox__label {
+    min-height: 24px;
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.checkbox .checkbox__label:before {
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox .checkbox__label:after {
+    top: 12px;
+    left: 12px;
+}
+
+@media (min-width: 720px) {
+    .checkbox .checkbox__label {
+        min-height:24px;
+        padding-left: 40px;
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .checkbox .checkbox__label:before {
+        width: 24px;
+        height: 24px;
+    }
+
+    .checkbox .checkbox__label:after {
+        top: 12px;
+        left: 12px;
+    }
+}
+
