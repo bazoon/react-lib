@@ -41,10 +41,15 @@
         z-index: 1;
     }
 
-    &__menu-item_active{
+    &__menu-item_active {
         border-bottom: solid 2px;
         @include border-color('secondary');
         box-sizing: inherit;
+    }
+
+    &__menu-item_disabled {
+        color: #959595;
+        cursor: default;
     }
 
 
