@@ -7,8 +7,6 @@
     cursor: pointer;
     position: relative;
     
-
-    
     &__wrapper {
         box-sizing: inherit;
         @include padding('halftiny');
@@ -107,7 +105,7 @@
             @include padding('tiny');
 
             &:hover {
-                // background: #ffffff;
+                background: #f5f5f5;
             }
         }
     }
