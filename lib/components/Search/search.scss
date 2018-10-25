@@ -1,0 +1,52 @@
+@import '../Scss/mixins';
+
+.search {
+    box-sizing: border-box;
+    position: relative;
+    
+
+
+    input {
+        @include padding('tiny');
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid silver;
+    }
+
+
+    &__results {
+        box-sizing: inherit;
+        position: absolute;
+        background: #ffffff;
+        max-height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: solid 1px silver;
+        border-radius: 5px;
+        top: 35px;
+
+        &-item {
+            height: 40px;
+            box-sizing: border-box;
+            @include padding-left('tiny');
+        }
+
+        &-item:hover, &-item:focus {
+            background-color: #f5f5f5;
+            outline: none;
+        }
+
+    }
+
+    &__input {
+        position: relative;
+    }
+    
+    &__icon {
+        width: 10px;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
