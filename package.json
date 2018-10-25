@@ -38,6 +38,8 @@
     "sass-loader": "^7.1.0"
   },
   "dependencies": {
+    "@nivo/bar": "^0.50.0",
+    "@nivo/pie": "^0.50.0",
     "classnames": "^2.2.6",
     "dom-helpers": "^3.3.1",
     "faker": "^4.1.0",
