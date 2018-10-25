@@ -9,7 +9,7 @@
     
     &__wrapper {
         box-sizing: inherit;
-        @include padding('halftiny');
+        @include padding('tiny');
         position: relative;
         z-index: 2;
         border: solid 1px rgba(hsl(0, 0%, 0%), 0.1);
