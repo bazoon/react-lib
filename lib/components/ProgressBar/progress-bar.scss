@@ -1,33 +1,71 @@
 @import '../Scss/mixins';
 
-.progress-bar {
-    background: #737373;
-    border-radius: 10px;
+
+ .progressbar {
+    
+    width:600px;
+    height:16px;
+    padding:0px;
+    
+    background:#cfcfcf;
+    border-width:1px;
+    border-style:solid;
+    border-color: #aaa #bbb #fff #bbb;    
+    box-shadow:inset 0px 2px 3px #bbb;    
 }
 
-.progress-bar__indicator {
-    border-radius: 10px;
-    height: 100%;
-    background: #167291;
-    background: linear-gradient(to right, #0b3a4a 0%,#167291 59%,#25c3f7 100%);
-    position: relative;
+.progressbar,
+.progressbar__inner {
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -o-border-radius:4px;
 }
 
-.progress-bar__indicator_almost {
-    background: linear-gradient(to right, #0b520c 0%,#149c16 59%,#1ee521 100%);
+.progressbar__inner {
+    width:77%; 
+    height:100%;
+    background:#999;
+    
+    background-size:18px 18px;
+    background-color: #ac0;   
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                        transparent 75%, transparent);
+    
+    box-shadow:inset 0px 2px 8px rgba(255, 255, 255, .5), inset -1px -1px 0px rgba(0, 0, 0, .2);
 }
 
-// .progress-bar__indicator:after {
-//     height: 100%;
-//     background: #167291;
-//     position: absolute;
-//     right: -20px;
-//     width: 40px;
-//     transform: skewX(-28deg);
-//     content: ''
-// }
+/*
+ * Color Options
+ */
+.progressbar-green .progressbar__inner{
+    background-color:#ac0;
+    width:100%;
+}
 
+.progressbar-blue .progressbar__inner{
+    background-color:#7ce;
+    width:90%;
+}
 
-.progress-bar__indicator_overdue {
-    background: linear-gradient(to right, #42040b 0%,#8a0817 59%,#eb0e28 100%);
+.progressbar-yellow .progressbar__inner{
+    background-color:#fb5;
+    width:80%;
+}
+
+.progressbar-red .progressbar__inner {
+    background-color:#f67;
+    width:1%;
+}
+
+/*
+ * Transition - just for fun
+ */
+.progressbar:hover .progressbar__inner{
+    width:100%;   
+}
+.progressbar .progressbar__inner,
+.progressbar:hover .progressbar__inner{
+    transition:width .5s ease-in; 
 }
