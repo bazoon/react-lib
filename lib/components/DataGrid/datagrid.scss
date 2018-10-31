@@ -2,6 +2,9 @@
 
 .datagrid {
 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
     input {
         box-sizing: border-box;
         
@@ -81,8 +84,10 @@
     }
 
     &__cell {
+        display: flex;
         text-align: left;
-        @include font-size('font-size');
+        // @include font-size('font-size');
+        font-size: 12px;
         font-weight: 100;
         max-width: 100%;
         
@@ -130,7 +135,7 @@
         @include background-color('grid-header-background');
         @include color('grid-header-color');
         @include font-weight('grid-header-font-weight');
-        @include font-size('font-size');
+        font-size: 12px;
         
         &_stacked {
             th, td {

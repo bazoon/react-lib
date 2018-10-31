@@ -17,11 +17,71 @@ $themes: (
     'grid-header-background': #F5F5F5,
     'grid-header-color': #666,
     'grid-row-selected-color': #f5f5f5,
-    'grid-header-font-weight': 600
+    'grid-header-font-weight': 300
+  ),
+  'dark2': (
+    'primary': #36367e ,
+    'secondary': #8f2f67,
+    'text-color': #fff,
+    'zero': 0,
+    'halftiny': $basicSize / 2,
+    'tiny': $basicSize,
+    'small': $basicSize * 2,
+    'medium': $basicSize * 3,
+    'large': $basicSize * 4,
+    'big': $basicSize * 5,
+    'font-size': 14px,
+
+    'grid-header-background': #F5F5F5,
+    'grid-header-color': #666,
+    'grid-row-selected-color': #f5f5f5,
+    'grid-header-font-weight': 300,
+
+    'menu-text-color': rgb(255, 255, 255),
+    'menu-background-color': #3c4650,
+
+    'black': #3c4650,
+    'blue': rgb(35, 97,146),
+    'red': rgb(239, 51, 64),
+    'silver': #fff,
+    'gold': rgb(163, 144, 97),
+    'white': #fff,
+
+    'main-wrapper-background': #dbdbdb
+
+
   ),
   'dark': (
-    'primary': firebrick,
-    'secondary': red
+    'primary': #36367e ,
+    'secondary': #8f2f67,
+    'text-color': #fff,
+    'zero': 0,
+    'halftiny': $basicSize / 2,
+    'tiny': $basicSize,
+    'small': $basicSize * 2,
+    'medium': $basicSize * 3,
+    'large': $basicSize * 4,
+    'big': $basicSize * 5,
+    'font-size': 14px,
+
+    'grid-header-background': #F5F5F5,
+    'grid-header-color': #666,
+    'grid-row-selected-color': #f5f5f5,
+    'grid-header-font-weight': 300,
+
+    'menu-text-color': rgb(255, 255, 255),
+    'menu-background-color': rgb(16, 24, 32),
+    'main-wrapper-background': #dadada,
+
+    'black': rgb(16, 24, 32),
+    'blue': rgb(35, 97,146),
+    'red': rgb(239, 51, 64),
+    'silver': rgb(143, 143, 140),
+    'gold': rgb(163, 144, 97),
+    'white': #fff,
+    
+
+
   )
 ) !default;
 
@@ -103,5 +163,13 @@ $themes: (
 }
 
 @mixin margin-bottom($arguments...) {
-    @include themify('padding-bottom', $arguments...);
+    @include themify('margin-bottom', $arguments...);
+}
+
+@mixin margin-left($arguments...) {
+    @include themify('margin-left', $arguments...);
+}
+
+@mixin margin-right($arguments...) {
+    @include themify('margin-right', $arguments...);
 }
