@@ -41,8 +41,12 @@
 
         &-title {
             width: 100%;
-            a {
+
+            &__link {
                 margin-left: 5px;
+                @include padding-top('halftiny');
+                @include padding-bottom('halftiny');
+                @include padding-left('halftiny');
             }
         }
 
@@ -51,8 +55,6 @@
         &-expand {
             width: $basicSize * 1.5;
             cursor: pointer;
-            
-            
         }
 
     }

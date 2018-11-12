@@ -10,12 +10,11 @@
     user-select: none;
     line-height: 1.5;
     padding-top: 0;
-    font-family: gost_regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     font-weight: 500;
     border: 1px solid hsla(0,0%,100%,.6666);
     border-radius: 4px;
     background: hsla(0,0%,100%,0);
-    color: #3b4256;
+    color: rgb(143, 143, 140);
     border-color: rgba(221,225,230,.666);   
     padding-bottom: 0;
 }
@@ -26,14 +25,14 @@
 }
 
 .btn:active,.btn:focus,.btn:hover {
-    color: #3b4256
+    color: rgb(143, 143, 140)
 }
 
 .btn.hover,.btn:hover {
     background: hsla(0,0%,100%,.2);
-    border-color: #0c49cd;
+    border-color: rgb(35, 97,146);
     transition: all .3s;
-    color: #3b4256
+    color: rgb(143, 143, 140)
 }
 
 .btn.active,.btn.focus,.btn:active,.btn:focus {
@@ -50,8 +49,8 @@
 }
 
 .btn-gray {
-    background: #3B4256;
-    border-color: #3B4256;
+    background: rgb(143, 143, 140);
+    border-color: rgb(143, 143, 140);
 }
 
 .btn-gray,.btn-gray:active,.btn-gray:focus,.btn-gray:hover {
@@ -59,15 +58,15 @@
 }
 
 .btn-gray.hover,.btn-gray:hover {
-    background: #2c303d;
-    border-color: #2c303d;
+    background: rgb(143, 143, 140);
+    border-color: rgb(143, 143, 140);
     transition: all .3s;
     color: #f4f7fb
 }
 
 .btn-gray.active,.btn-gray.focus,.btn-gray:active,.btn-gray:focus {
-    background: #2c303d;
-    border-color: #2c303d;
+    background: rgb(143, 143, 140);
+    border-color: rgb(143, 143, 140);
     transition: all 0s
 }
 
@@ -80,8 +79,8 @@
 
 // primary
 .btn-primary {
-    background: #0c49cd;
-    border-color: #0c49cd
+    background: rgb(35, 97,146);
+    border-color: rgb(35, 97,146)
 }
 
 .btn-primary,.btn-primary:active,.btn-primary:focus,.btn-primary:hover {
@@ -144,14 +143,14 @@
 }
 
 .btn-default,.btn-default:active,.btn-default:focus,.btn-default:hover {
-    color: #3b4256
+    color: rgb(143, 143, 140)
 }
 
 .btn-default.hover,.btn-default:hover {
     background: hsla(0,0%,100%,.2);
-    border-color: #0c49cd;
+    border-color: rgb(35, 97,146);
     transition: all .3s;
-    color: #3b4256
+    color: rgb(143, 143, 140)
 }
 
 .btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus {
@@ -175,7 +174,6 @@
     padding-left: 12px;
     padding-right: 12px;
 
-    font-family: gost_regular;
     font-size: 16px;
     color: #F4F7FB;
     letter-spacing: 0;
@@ -197,14 +195,14 @@
 }
 
 .btn-md,.btn-sm {
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 12px;
     padding-right: 12px
 }
 
 .btn-sm {
-    height: 28px;
-    line-height: 28px
+    height: 18px;
+    line-height: 18px
 }
 
 
@@ -214,14 +212,14 @@
 }
 
 .btn-white,.btn-white:active,.btn-white:focus,.btn-white:hover {
-    color: #3b4256
+    color: rgb(143, 143, 140)
 }
 
 .btn-white.hover,.btn-white:hover {
     background: #f7f7f7;
     border-color: #e6e6e6;
     transition: all .3s;
-    color: #3b4256
+    color: rgb(143, 143, 140)
 }
 
 .btn-white.active,.btn-white.focus,.btn-white:active,.btn-white:focus {
@@ -326,14 +324,14 @@
     }
 
     .btn-md,.btn-sm {
-        font-size: 16px;
+        font-size: 12px;
         padding-left: 16px;
         padding-right: 16px
     }
 
     .btn-sm {
-        height: 32px;
-        line-height: 32px
+        height: 20px;
+        line-height: 20px
     }
 }
 

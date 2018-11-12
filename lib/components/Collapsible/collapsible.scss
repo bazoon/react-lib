@@ -1,0 +1,27 @@
+@import '../Scss/mixins.scss';
+
+.collapsible {
+    position: relative;
+    @include margin-bottom('tiny');
+
+    &__toggle {
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+
+    &__title {
+        box-sizing: border-box;
+        background-color: #eeeeee;
+        height: 26px;
+        @include padding-left('tiny');
+        display: flex;
+        align-items: center;
+        color: #8f8f8c;
+    }
+    
+
+}

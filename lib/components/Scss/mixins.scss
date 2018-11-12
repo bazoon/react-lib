@@ -64,20 +64,25 @@ $themes: (
     'big': $basicSize * 5,
     'font-size': 14px,
 
-    'grid-header-background': #F5F5F5,
-    'grid-header-color': #666,
+    'grid-header-background': #ffffff,
+    'grid-header-color': rgb(143, 143, 140),
     'grid-row-selected-color': #f5f5f5,
-    'grid-header-font-weight': 300,
+    'grid-header-font-weight': 600,
 
-    'menu-text-color': rgb(255, 255, 255),
+    'menu-text-color': #ffffff,
+    'menu-selected-color': #b8860b,
     'menu-background-color': rgb(16, 24, 32),
-    'main-wrapper-background': #dadada,
+    'main-wrapper-background': #ffffff,
 
     'black': rgb(16, 24, 32),
     'blue': rgb(35, 97,146),
-    'red': rgb(239, 51, 64),
+    'red': orangered,
     'silver': rgb(143, 143, 140),
-    'gold': rgb(163, 144, 97),
+    'silver2': #dadada,
+    'silver3': #767171,
+    'silver4': #eeeeee,
+    'silver5': #292626,
+    'gold': darkgoldenrod,
     'white': #fff,
     
 
@@ -172,4 +177,8 @@ $themes: (
 
 @mixin margin-right($arguments...) {
     @include themify('margin-right', $arguments...);
+}
+
+@mixin border-color($arguments...) {
+    @include themify('border-color', $arguments...);
 }

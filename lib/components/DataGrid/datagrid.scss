@@ -18,6 +18,8 @@
         box-sizing: border-box;
         vertical-align: top;
         border: 1px solid #eee;
+        border-left: none;
+        border-right: none;
         @include padding-left('tiny');
         @include padding-right('tiny');
         @include padding-top('tiny');
@@ -84,7 +86,7 @@
     }
 
     &__cell {
-        display: flex;
+        // display: flex;
         text-align: left;
         // @include font-size('font-size');
         font-size: 12px;
@@ -100,6 +102,7 @@
         }
 
         &_stacked {
+            
             th, td {
                 border-left: none;
                 border-top: none;
