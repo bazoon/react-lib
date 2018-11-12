@@ -38,17 +38,23 @@
     "sass-loader": "^7.1.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
     "@nivo/bar": "^0.50.0",
     "@nivo/pie": "^0.50.0",
     "classnames": "^2.2.6",
     "dom-helpers": "^3.3.1",
     "faker": "^4.1.0",
+    "i": "^0.3.6",
     "normalize.css": "^8.0.0",
+    "npm": "^6.4.1",
     "prop-types": "^15.6.2",
     "qs": "^6.5.2",
     "ramda": "^0.25.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
     "react-virtualized": "^9.20.1",
     "react-window": "^1.2.1",
     "webpack": "^4.19.1"
